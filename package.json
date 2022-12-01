@@ -1,0 +1,23 @@
+{
+  "name": "infosport",
+  "version": "1.0.0",
+  "description": "proyecto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "ip": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "^6.7.3",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "E12",
+  "license": "ISC"
+}
