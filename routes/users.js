@@ -59,4 +59,10 @@ router.post('/authenticate', (req, res, next) => {
   });
   });
 });
+
+//Profile
+router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => { //Lo del pasapote es para proteger la ruta 
+  res.json({user: req.user});
+}); 
+
 module.exports = router;
