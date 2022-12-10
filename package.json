@@ -16,7 +16,8 @@
     "jsonwebtoken": "*",
     "mongoose": "^6.7.3",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "express-session": "*"
   },
   "author": "E12",
   "license": "ISC"

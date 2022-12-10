@@ -5,6 +5,7 @@ const cors = require('cors'); //Permite hacer un request a nuestra api desde un 
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./dbconfig/database');
+var session = require('express-session');
 var ip = require("ip");
 
 //Connect to database
@@ -27,6 +28,21 @@ app.use(express.static(path.join(__dirname, 'public'))); //En public irá todo0 
 
 //Body Parser Middleware
 app.use(bodyParser.json());
+
+//Express session Middleware
+app.use(session({
+  secret: 'secreto secreto',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
+
+//ort Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./dbconfig/passport')(passport);
+
 
 app.use('/users', users);
 //Index Route
