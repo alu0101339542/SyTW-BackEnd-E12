@@ -16,3 +16,8 @@ script:
   - npm run test:headless
   - npm run build
   - xvfb-run npm run e2e
+  
+ notifications:
+  slack: 'sytw:GgiUiOJJeifKY0uamYUGF1Zr#12'
+  travis encrypt "sytw:GgiUiOJJeifKY0uamYUGF1Zr#12" --add notifications.slack.rooms
+  
