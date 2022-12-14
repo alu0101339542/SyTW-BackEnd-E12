@@ -18,6 +18,9 @@ script:
   - xvfb-run npm run e2e
   
  notifications:
-  slack: 'sytw:GgiUiOJJeifKY0uamYUGF1Zr#12'
-  travis encrypt "sytw:GgiUiOJJeifKY0uamYUGF1Zr#12" --add notifications.slack.rooms
+  slack: 
+    rooms:
+	    - sytwull:zY6e6O7HWgJUFzBFISyQyTf7#e12
+      travis encrypt "sytwull:zY6e6O7HWgJUFzBFISyQyTf7" --add notifications.slack
+
   
