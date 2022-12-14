@@ -20,7 +20,7 @@ script:
  notifications:
   slack: 
     rooms:
-	    - sytwull:zY6e6O7HWgJUFzBFISyQyTf7#e12
-      travis encrypt "sytwull:zY6e6O7HWgJUFzBFISyQyTf7" --add notifications.slack
+    	- sytwull:zY6e6O7HWgJUFzBFISyQyTf7#e12
+	travis encrypt "sytwull:zY6e6O7HWgJUFzBFISyQyTf7" --add notifications.slack
 
   
