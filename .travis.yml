@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "8"
+dist: trusty
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+addons:
+  chrome: stable
+
+script:
+  - npm run lint
+  - npm run test:headless
+  - npm run build
+  - xvfb-run npm run e2e
+  
+ notifications:
+  slack: 
+    rooms:
+    	- sytwull:zY6e6O7HWgJUFzBFISyQyTf7#e12
+	travis encrypt "sytwull:zY6e6O7HWgJUFzBFISyQyTf7" --add notifications.slack
+
+  
