@@ -20,7 +20,7 @@ jobs:
           node-version: 18.10.0
       - run: npm ci
      # - run: npm test
-      - run: node app.js
+      #- run: node app.js
 
   publish-gpr:
     needs: build
